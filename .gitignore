@@ -1,0 +1,32 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# DuckDB materialized files (DB is rebuilt from CSVs)
+*.duckdb
+*.duckdb.wal
+
+# OS
+.DS_Store
+
+# Local model/embedding caches
+.cache/

@@ -1,0 +1,61 @@
+account_id,account_name,account_type,region,state,on_premise_flag,established_date
+ACC0001,Oak Liquors,Retailer,Southeast,FL,0,2019-06-27
+ACC0002,Metro Liquors,Retailer,Midwest,IL,0,2016-11-17
+ACC0003,Vine Grill,Retailer,Southwest,AZ,0,2021-10-08
+ACC0004,Harbor Liquors,Retailer,Northeast,PA,0,2020-03-24
+ACC0005,Vine Grill,Retailer,Southeast,FL,0,2016-05-24
+ACC0006,Granite Bottle Shop,Retailer,West,OR,1,2022-09-05
+ACC0007,Oak Distributing,Distributor,Southwest,AZ,0,2015-12-02
+ACC0008,Oak Distributing,Distributor,Midwest,IL,0,2015-05-19
+ACC0009,Harbor Bottle Shop,Retailer,West,WA,0,2015-03-29
+ACC0010,Harbor Tavern,Retailer,Northeast,MA,1,2017-05-09
+ACC0011,Riverside Distributing,Distributor,Southeast,GA,0,2023-04-19
+ACC0012,Vine Distributing,Distributor,Northeast,NY,0,2020-09-27
+ACC0013,Metro Bottle Shop,Retailer,Northeast,MA,0,2020-07-30
+ACC0014,Lakeshore Liquors,Retailer,Midwest,OH,1,2016-11-12
+ACC0015,Harbor Liquors,Retailer,Northeast,PA,0,2015-09-18
+ACC0016,Granite Grill,Retailer,Midwest,IL,0,2021-05-28
+ACC0017,Riverside Liquors,Retailer,Southeast,FL,1,2017-10-17
+ACC0018,Summit Distributing,Distributor,Northeast,PA,0,2020-04-29
+ACC0019,Oak Market,Retailer,Midwest,OH,1,2020-02-20
+ACC0020,Lakeshore Grill,Retailer,Northeast,PA,0,2015-06-13
+ACC0021,Summit Market,Retailer,Southeast,FL,0,2015-01-18
+ACC0022,Oak Bottle Shop,Retailer,Southwest,TX,0,2021-12-12
+ACC0023,Harbor Liquors,Retailer,West,OR,0,2016-06-01
+ACC0024,Metro Grill,Retailer,West,WA,0,2023-02-17
+ACC0025,Oak Tavern,Retailer,Midwest,OH,1,2020-11-25
+ACC0026,Vine Bottle Shop,Retailer,Midwest,OH,0,2021-07-08
+ACC0027,Lakeshore Market,Retailer,West,WA,0,2018-10-19
+ACC0028,Riverside Distributing,Distributor,Midwest,MI,0,2020-01-05
+ACC0029,Metro Distributing,Distributor,Northeast,MA,0,2018-08-31
+ACC0030,Harbor Grill,Retailer,Northeast,PA,0,2017-04-13
+ACC0031,Riverside Grill,Retailer,West,CA,0,2017-06-02
+ACC0032,Lakeshore Bottle Shop,Retailer,Midwest,OH,0,2018-05-21
+ACC0033,Summit Liquors,Retailer,West,CA,0,2021-06-23
+ACC0034,Harbor Liquors,Retailer,Southwest,AZ,0,2019-07-29
+ACC0035,Metro Bottle Shop,Retailer,Southeast,NC,0,2016-11-05
+ACC0036,Harbor Liquors,Retailer,Midwest,MI,0,2018-10-04
+ACC0037,Riverside Bottle Shop,Retailer,West,OR,0,2019-03-08
+ACC0038,Summit Liquors,Retailer,Midwest,OH,1,2017-10-12
+ACC0039,Harbor Market,Retailer,Southwest,CO,0,2018-11-14
+ACC0040,Lakeshore Market,Retailer,West,OR,1,2016-07-07
+ACC0041,Summit Liquors,Retailer,Southeast,GA,1,2015-09-13
+ACC0042,Harbor Grill,Retailer,Southwest,AZ,1,2022-09-28
+ACC0043,Harbor Bottle Shop,Retailer,Southeast,FL,1,2018-01-11
+ACC0044,Riverside Bottle Shop,Retailer,West,CA,0,2021-03-21
+ACC0045,Riverside Market,Retailer,Southeast,NC,1,2015-07-31
+ACC0046,Oak Market,Retailer,Midwest,OH,1,2018-06-02
+ACC0047,Lakeshore Market,Retailer,Northeast,PA,0,2020-01-18
+ACC0048,Oak Distributing,Distributor,West,OR,0,2021-11-09
+ACC0049,Granite Bottle Shop,Retailer,Southeast,GA,1,2015-08-12
+ACC0050,Summit Liquors,Retailer,Southeast,FL,0,2023-08-26
+ACC0051,Oak Liquors,Retailer,Southeast,NC,0,2020-10-16
+ACC0052,Oak Distributing,Distributor,Midwest,MI,0,2023-02-14
+ACC0053,Harbor Tavern,Retailer,Southeast,GA,0,2016-10-31
+ACC0054,Oak Grill,Retailer,Southeast,NC,1,2022-11-01
+ACC0055,Harbor Distributing,Distributor,Midwest,OH,0,2015-06-20
+ACC0056,Vine Bottle Shop,Retailer,Southwest,AZ,0,2015-07-14
+ACC0057,Lakeshore Market,Retailer,Midwest,IL,1,2023-05-25
+ACC0058,Summit Market,Retailer,Midwest,OH,0,2019-08-17
+ACC0059,Lakeshore Bottle Shop,Retailer,West,CA,1,2017-04-19
+ACC0060,Harbor Grill,Retailer,Northeast,NY,1,2022-04-07
