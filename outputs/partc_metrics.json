@@ -1,0 +1,129 @@
+{
+  "audit": {
+    "rows": 820,
+    "positives": 57,
+    "churn_rate": 0.0695,
+    "offboarding_flag_corr_with_label": 0.822,
+    "churn_rate_flag_1": 0.765,
+    "churn_rate_flag_0": 0.007,
+    "dropped_for_leakage": [
+      "offboarding_ticket_flag"
+    ],
+    "payment_terms_mapping_inferred": {
+      "0": "NET30",
+      "1": "NET60",
+      "2": "COD"
+    }
+  },
+  "model_comparison": [
+    {
+      "model": "logreg",
+      "pr_auc_mean": 0.15744499870736034,
+      "pr_auc_std": 0.08043432555338963,
+      "roc_auc_mean": 0.6171001813803672,
+      "roc_auc_std": 0.07913416223609676
+    },
+    {
+      "model": "xgboost",
+      "pr_auc_mean": 0.141882171086554,
+      "pr_auc_std": 0.055234309035223514,
+      "roc_auc_mean": 0.6409929402382963,
+      "roc_auc_std": 0.06680353413887927
+    },
+    {
+      "model": "random_forest",
+      "pr_auc_mean": 0.13172380769116007,
+      "pr_auc_std": 0.05346553027063353,
+      "roc_auc_mean": 0.6136895268474215,
+      "roc_auc_std": 0.07958812498970007
+    },
+    {
+      "model": "dummy",
+      "pr_auc_mean": 0.07470939998656186,
+      "pr_auc_std": 0.0072549728662826395,
+      "roc_auc_mean": 0.5111736560652969,
+      "roc_auc_std": 0.030877161157588644
+    }
+  ],
+  "selected_model": "logreg",
+  "oof_metrics": {
+    "pr_auc": 0.1207,
+    "roc_auc": 0.6255,
+    "base_rate": 0.0695,
+    "recall_precision_at_k": [
+      {
+        "k_frac": 0.1,
+        "k": 82,
+        "recall_at_k": 0.193,
+        "precision_at_k": 0.134,
+        "lift_at_k": 1.93
+      },
+      {
+        "k_frac": 0.2,
+        "k": 164,
+        "recall_at_k": 0.281,
+        "precision_at_k": 0.098,
+        "lift_at_k": 1.4
+      },
+      {
+        "k_frac": 0.3,
+        "k": 246,
+        "recall_at_k": 0.404,
+        "precision_at_k": 0.093,
+        "lift_at_k": 1.35
+      }
+    ]
+  },
+  "top_feature_importances": [
+    {
+      "feature": "avg_monthly_cases",
+      "importance": 0.8833
+    },
+    {
+      "feature": "region_Northeast",
+      "importance": 0.4726
+    },
+    {
+      "feature": "recency_days",
+      "importance": 0.369
+    },
+    {
+      "feature": "region_Midwest",
+      "importance": 0.3415
+    },
+    {
+      "feature": "payment_terms_NET60",
+      "importance": 0.2976
+    },
+    {
+      "feature": "tenure_months",
+      "importance": 0.2183
+    },
+    {
+      "feature": "region_West",
+      "importance": 0.193
+    },
+    {
+      "feature": "reimbursement_participation",
+      "importance": 0.192
+    },
+    {
+      "feature": "account_type_Distributor",
+      "importance": 0.1791
+    },
+    {
+      "feature": "account_type_Retailer",
+      "importance": 0.1774
+    },
+    {
+      "feature": "payment_terms_COD",
+      "importance": 0.1757
+    },
+    {
+      "feature": "payment_terms_NET30",
+      "importance": 0.1236
+    }
+  ],
+  "serve_scored": 240,
+  "serve_flagged_top20pct": 48
+}
