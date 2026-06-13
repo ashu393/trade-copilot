@@ -8,6 +8,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from dotenv import dotenv_values
+from pydantic import model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 # Repo root = two levels up from this file (src/copilot/config.py -> repo root).
@@ -35,6 +37,22 @@ class Settings(BaseSettings):
     # SQL safety limits
     copilot_max_result_rows: int = 1000
     copilot_sql_timeout_s: int = 10
+
+    @model_validator(mode="after")
+    def _recover_blank_key_from_dotenv(self) -> "Settings":
+        """Treat an *empty* env var as unset and fall back to .env.
+
+        A blank shell/launchctl variable (e.g. `ANTHROPIC_API_KEY=""`) takes
+        precedence over the .env file in pydantic-settings, which silently
+        forces the offline stub even when .env holds a real key. If the
+        resolved key is blank, re-read it from the .env file directly.
+        """
+        if not self.anthropic_api_key.strip():
+            from_file = (dotenv_values(REPO_ROOT / ".env").get("anthropic_api_key")
+                         or dotenv_values(REPO_ROOT / ".env").get("ANTHROPIC_API_KEY"))
+            if from_file and from_file.strip():
+                self.anthropic_api_key = from_file.strip()
+        return self
 
     @property
     def has_real_api_key(self) -> bool:
