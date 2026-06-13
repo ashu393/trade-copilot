@@ -10,11 +10,15 @@ compile) and reused across requests.
 from __future__ import annotations
 
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
 from .agent import build_agent, run_agent
+
+WEB_DIR = Path(__file__).resolve().parent / "web"
 
 _state: dict = {}
 
@@ -42,6 +46,12 @@ class AskResponse(BaseModel):
     sql: str | None = None
     citations: list[str] = []
     trace: list[str] = []
+
+
+@app.get("/", include_in_schema=False)
+def index() -> FileResponse:
+    """Serve the single-page web UI."""
+    return FileResponse(WEB_DIR / "index.html")
 
 
 @app.get("/health")

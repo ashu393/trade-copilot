@@ -21,4 +21,5 @@ RUN python -c "from copilot.db import Database; Database().build()"
 EXPOSE 8000
 
 # ANTHROPIC_API_KEY is supplied at run time via --env-file/.env (never baked in).
-CMD ["uvicorn", "copilot.api:app", "--host", "0.0.0.0", "--port", "8000"]
+# Shell form so $PORT (injected by Railway/Render/etc.) expands; defaults to 8000 locally.
+CMD uvicorn copilot.api:app --host 0.0.0.0 --port ${PORT:-8000}
