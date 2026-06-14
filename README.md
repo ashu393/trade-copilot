@@ -26,7 +26,7 @@ refuses to fabricate, and asks before it guesses.
 | Code repo | this repository |
 | Write-up (≤3 pages): design, trade-offs, data findings | [`writeup.md`](writeup.md) |
 | Agent graph diagram + node/edge reference | [`ARCHITECTURE.md`](ARCHITECTURE.md) |
-| Loom walkthrough script | [`LOOM_SCRIPT.md`](LOOM_SCRIPT.md) |
+| Loom walkthrough (5–10 min video) | _link added after recording_ |
 | This README answers every Part A/B/C deliverable inline, and links to the docs above for depth. | — |
 
 ## Quick start
