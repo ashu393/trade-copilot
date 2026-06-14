@@ -21,5 +21,7 @@ RUN python -c "from copilot.db import Database; Database().build()"
 EXPOSE 8000
 
 # ANTHROPIC_API_KEY is supplied at run time via --env-file/.env (never baked in).
-# Shell form so $PORT (injected by Railway/Render/etc.) expands; defaults to 8000 locally.
-CMD uvicorn copilot.api:app --host 0.0.0.0 --port ${PORT:-8000}
+# JSON/exec form (clean signal handling for graceful stop/restart) while still
+# expanding $PORT (injected by Railway/Render/etc.); `exec` makes uvicorn PID 1
+# so it receives SIGTERM directly. Defaults to 8000 locally.
+CMD ["sh", "-c", "exec uvicorn copilot.api:app --host 0.0.0.0 --port ${PORT:-8000}"]
