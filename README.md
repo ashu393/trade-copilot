@@ -149,14 +149,21 @@ Three independent mechanisms:
 
 ### Graph: nodes, edges, and the state that flows
 
-```
-classify ─┬─ sql ──▶ gen_sql ─▶ execute_validate ─┬─ ok ─────▶ compose ─▶ END
-          │                          ▲             ├─ retry ──▶ gen_sql (bounded)
-          │                          └─────────────┘
-          │                                        └─ give up ▶ refuse ─▶ END
-          ├─ kb ──────▶ retrieve_kb ───────────────────────▶ compose ─▶ END
-          ├─ clarify ──────────────────────────────────────────────▶ clarify ─▶ END
-          └─ refuse ───────────────────────────────────────────────▶ refuse ─▶ END
+```mermaid
+flowchart TD
+    Q([question]) --> C{classify}
+    C -->|sql| G[gen_sql]
+    C -->|kb| R[retrieve_kb]
+    C -->|clarify| CL[clarify]
+    C -->|refuse| RF[refuse]
+    G --> EV{execute_validate}
+    EV -->|ok| CO[compose]
+    EV -->|retry bounded| G
+    EV -->|give up| RF
+    R --> CO
+    CO --> E([end])
+    CL --> E
+    RF --> E
 ```
 
 - **Nodes:** `classify`, `gen_sql`, `execute_validate`, `retrieve_kb`,
